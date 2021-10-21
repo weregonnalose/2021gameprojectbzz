@@ -1,0 +1,150 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Control365.gd" type="Script" id=1]
+[ext_resource path="res://m5x7.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 64
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 64
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 64
+font_data = ExtResource( 2 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.224
+anchor_bottom = 1.0
+margin_top = -13.0
+margin_right = -6.10352e-05
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+margin_right = 917.0
+margin_bottom = 1037.0
+color = Color( 0.0392157, 0.0705882, 0.878431, 1 )
+
+[node name="CenterContainer" type="CenterContainer" parent="Control"]
+margin_right = 917.0
+margin_bottom = 1037.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/CenterContainer"]
+margin_left = 158.0
+margin_top = 363.0
+margin_right = 758.0
+margin_bottom = 673.0
+custom_constants/separation = 100
+
+[node name="CenterContainer" type="CenterContainer" parent="Control/CenterContainer/VBoxContainer"]
+margin_right = 600.0
+margin_bottom = 159.0
+
+[node name="Label" type="Label" parent="Control/CenterContainer/VBoxContainer/CenterContainer"]
+margin_right = 600.0
+margin_bottom = 159.0
+custom_fonts/font = SubResource( 1 )
+text = "Survive as long as
+ you can by avoiding the
+objects with the arrow keys"
+
+[node name="CenterContainer2" type="CenterContainer" parent="Control/CenterContainer/VBoxContainer"]
+margin_top = 259.0
+margin_right = 600.0
+margin_bottom = 310.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/CenterContainer/VBoxContainer/CenterContainer2"]
+margin_left = 226.0
+margin_right = 374.0
+margin_bottom = 51.0
+
+[node name="CenterContainer" type="CenterContainer" parent="Control/CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer"]
+margin_right = 148.0
+margin_bottom = 51.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer"]
+margin_right = 148.0
+margin_bottom = 51.0
+
+[node name="Selector" type="Label" parent="Control/CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer/HBoxContainer"]
+margin_right = 16.0
+margin_bottom = 51.0
+rect_min_size = Vector2( 16, 0 )
+custom_fonts/font = SubResource( 2 )
+text = ">"
+
+[node name="Start" type="Label" parent="Control/CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer/HBoxContainer"]
+margin_left = 20.0
+margin_right = 148.0
+margin_bottom = 51.0
+custom_fonts/font = SubResource( 2 )
+text = " Start"
+
+[node name="CenterContainer2" type="CenterContainer" parent="."]
+margin_top = 55.0
+margin_right = 920.0
+margin_bottom = 1480.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer2"]
+margin_left = 386.0
+margin_top = 687.0
+margin_right = 534.0
+margin_bottom = 738.0
+
+[node name="Selector" type="Label" parent="CenterContainer2/HBoxContainer"]
+margin_right = 16.0
+margin_bottom = 51.0
+rect_min_size = Vector2( 16, 0 )
+custom_fonts/font = SubResource( 3 )
+text = ">"
+
+[node name="Help" type="Label" parent="CenterContainer2/HBoxContainer"]
+margin_left = 20.0
+margin_right = 148.0
+margin_bottom = 51.0
+rect_min_size = Vector2( 128, 0 )
+custom_fonts/font = SubResource( 3 )
+text = " Help"
+
+[node name="CenterContainer3" type="CenterContainer" parent="."]
+margin_left = 386.0
+margin_top = 680.0
+margin_right = 153.0
+margin_bottom = 161.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer3"]
+margin_right = 148.0
+margin_bottom = 51.0
+
+[node name="Selector" type="Label" parent="CenterContainer3/HBoxContainer"]
+margin_right = 16.0
+margin_bottom = 51.0
+rect_min_size = Vector2( 16, 0 )
+custom_fonts/font = SubResource( 3 )
+text = ">"
+
+[node name="Exit" type="Label" parent="CenterContainer3/HBoxContainer"]
+margin_left = 20.0
+margin_right = 148.0
+margin_bottom = 51.0
+rect_min_size = Vector2( 128, 0 )
+custom_fonts/font = SubResource( 3 )
+text = " Exit"

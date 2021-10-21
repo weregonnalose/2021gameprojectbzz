@@ -1,0 +1,177 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://MrMegaBob.png" type="Texture" id=1]
+[ext_resource path="res://images.jpg" type="Texture" id=2]
+[ext_resource path="res://New Piskel-1.png (3).png" type="Texture" id=3]
+[ext_resource path="res://m5x7.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Exit the Premises.mp3" type="AudioStream" id=5]
+[ext_resource path="res://.import/Spawn_Area.gd" type="Script" id=6]
+[ext_resource path="res://.import/MrMegaBob.gd" type="Script" id=7]
+[ext_resource path="res://Label2.gd" type="Script" id=8]
+[ext_resource path="res://8bit Dungeon Level.mp3" type="AudioStream" id=9]
+[ext_resource path="res://Go Cart.mp3" type="AudioStream" id=10]
+[ext_resource path="res://Digital Lemonade.mp3" type="AudioStream" id=11]
+[ext_resource path="res://fdiuogfoiugfoivfoigcoijgijokcgjcgggcfyftfgfy.gd" type="Script" id=24]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 90.8342
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 87.1617
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 19.9238, 595.063 )
+
+[sub_resource type="CircleShape2D" id=4]
+radius = 10.3629
+
+[sub_resource type="DynamicFont" id=5]
+size = 50
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 50
+font_data = ExtResource( 4 )
+
+[node name="Node2D" type="Node2D" groups=[
+"enemies",
+]]
+position = Vector2( -2, 1 )
+script = ExtResource( 6 )
+
+[node name="New Piskel-1png (2)" type="Sprite" parent="."]
+position = Vector2( 378.773, 486.868 )
+rotation = 1.5708
+scale = Vector2( 4.74351, 3.45232 )
+texture = ExtResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 380, 512.057 )
+rotation = 1.5708
+
+[node name="MrMegaBob" type="KinematicBody2D" parent="."]
+position = Vector2( 450, 650 )
+scale = Vector2( 0.2, 0.2 )
+collision_layer = 7
+collision_mask = 7
+script = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="MrMegaBob"]
+texture = ExtResource( 1 )
+
+[node name="Area2D" type="Area2D" parent="MrMegaBob"]
+position = Vector2( 0, 0.000244141 )
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MrMegaBob/Area2D"]
+position = Vector2( 2.28271, 1.06372 )
+shape = SubResource( 1 )
+one_way_collision_margin = 4.2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MrMegaBob"]
+position = Vector2( -0.346436, -3.52808 )
+shape = SubResource( 2 )
+
+[node name="bee_movie" type="Node2D" parent="MrMegaBob"]
+position = Vector2( 150, -1.181 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Wall" type="StaticBody2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Wall"]
+position = Vector2( -94.7372, 410.841 )
+rotation = 1.5708
+scale = Vector2( 6.33708, 0.977271 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall"]
+position = Vector2( -21.3268, 426.575 )
+shape = SubResource( 3 )
+
+[node name="Wall3" type="StaticBody2D" parent="."]
+position = Vector2( 780.196, 1.54508 )
+rotation = 1.5708
+
+[node name="Sprite" type="Sprite" parent="Wall3"]
+position = Vector2( -94.7372, 410.841 )
+rotation = 1.5708
+scale = Vector2( 6.33708, 0.977271 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall3"]
+position = Vector2( -21.3268, 426.575 )
+shape = SubResource( 3 )
+
+[node name="Area2D" type="Area2D" parent="Wall3"]
+collision_layer = 7
+collision_mask = 7
+script = ExtResource( 24 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall3/Area2D"]
+position = Vector2( 0.132435, 0.132423 )
+shape = SubResource( 4 )
+
+[node name="Wall2" type="StaticBody2D" parent="."]
+position = Vector2( 798.79, 10.0794 )
+
+[node name="Sprite" type="Sprite" parent="Wall2"]
+position = Vector2( -94.7372, 410.841 )
+rotation = 1.5708
+scale = Vector2( 6.33708, 0.977271 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall2"]
+position = Vector2( -21.3268, 426.575 )
+shape = SubResource( 3 )
+
+[node name="Timer23" type="Timer" parent="."]
+
+[node name="Scoring" type="Node2D" parent="."]
+position = Vector2( 1.96431, -0.982155 )
+
+[node name="Control" type="Control" parent="Scoring"]
+margin_right = 450.0
+margin_bottom = 70.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Scoring/Control"]
+margin_left = 297.49
+margin_right = 362.49
+margin_bottom = 65.0
+custom_fonts/font = SubResource( 5 )
+script = ExtResource( 8 )
+
+[node name="Label2" type="Label" parent="Scoring/Control"]
+margin_left = 5.61237
+margin_right = 296.612
+margin_bottom = 60.0
+custom_fonts/font = SubResource( 6 )
+text = "Seconds Survived:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer2" type="Timer" parent="Scoring"]
+
+[node name="sound1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -3.039
+
+[node name="sound2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+
+[node name="sound3" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 27.5811, -12.2031 )
+stream = ExtResource( 10 )
+volume_db = 10.0
+
+[node name="sound4" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer23" to="." method="_on_Timer23_timeout"]
+[connection signal="timeout" from="Scoring/Timer2" to="Scoring/Control/Label2" method="_on_Timer2_timeout"]

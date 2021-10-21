@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Exit the Premises.mp3-f18108ee3e034c7a7c57fe2aa81b015b.mp3str"
+
+[deps]
+
+source_file="res://Exit the Premises.mp3"
+dest_files=[ "res://.import/Exit the Premises.mp3-f18108ee3e034c7a7c57fe2aa81b015b.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

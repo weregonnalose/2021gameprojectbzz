@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Go Cart.mp3-35d94b24b3edd27ead0a1269a69dadb8.mp3str"
+
+[deps]
+
+source_file="res://Go Cart.mp3"
+dest_files=[ "res://.import/Go Cart.mp3-35d94b24b3edd27ead0a1269a69dadb8.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

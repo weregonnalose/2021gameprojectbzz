@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/8bit Dungeon Level.mp3-68de1c236722084d9f85ce0f46149dfc.mp3str"
+
+[deps]
+
+source_file="res://8bit Dungeon Level.mp3"
+dest_files=[ "res://.import/8bit Dungeon Level.mp3-68de1c236722084d9f85ce0f46149dfc.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
